@@ -1,9 +1,10 @@
 
 /*
-@function:encryption a string
-@author:wyxTrustYs
-@time:2018-7-9
-@argument:char*
+	@Name:Encode.cpp
+	@Author:wyxTrustYs
+	@time:2018-7-9
+	@Argument:char*
+	@Description：对密码进行按位取反加密
 */
 
 #include <stdio.h>

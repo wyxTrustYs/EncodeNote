@@ -1,9 +1,11 @@
 
 /*
-@function:encryption a string
-@author:wyxTrustYs
-@time:2018-7-9
-@argument:char*
+	@Name:MyDecode.cpp
+	@Programe:EncodeNoteBook
+	@Author:wyxTrustYs
+	@Time:2018-7-9
+	@Argument:char*
+	@Description£º½âÂë
 */
 
 #include <stdio.h>

@@ -1,3 +1,12 @@
+
+/*
+	@Name:GetFromFile.cpp
+	@Author;wyxTrustYs
+	@Time:2018-7-11
+	@Description:按条件查看数据
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>

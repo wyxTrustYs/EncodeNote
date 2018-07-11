@@ -1,3 +1,14 @@
+
+/*
+	@Name:GetFromFile.cpp
+	@Author;wyxTrustYs
+	@Time:2018-7-11
+	@Argument: char *str
+	@Description:从文件中读取数据并保存到AccountData、PasswordData、TipsData字符数组中
+				 并进行修改、删除、添加操作。
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
@@ -77,6 +88,7 @@ int GetFromFile(char *str) {
 		case 2: 
 		{
 			printf("请输入修改的密码：");
+			system("cls");
 			while (PassWordConfirm(PasswordData[AccountNumber]) == 0) {
 			}
 			printf("修改成功\n");

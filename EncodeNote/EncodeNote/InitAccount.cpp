@@ -1,3 +1,14 @@
+
+/*
+
+	@Name:InitAccount.cpp
+	@author;wyxTrustYs
+	@Time:2018-7-11
+	@Argument:
+	@Description:创建账户
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
@@ -22,6 +33,9 @@ int InitAccount() {
 	getchar();
 	printf("请输入密码(最多20位)：\n");
 	i = 0;
+	
+	//输入密码（隐藏输入字符）
+
 	while ((ch = getch()) != 13) {
 		if (ch != 8) {
 			password[i] = ch;
@@ -35,6 +49,9 @@ int InitAccount() {
 		}
 	}
 //	printf("%s\n", password);
+
+
+	//确认密码（隐藏字符）
 	printf("\n");
 	printf("确认密码：\n");
 	tmp_password = (char *)malloc(21 * sizeof(char));
@@ -55,6 +72,8 @@ int InitAccount() {
 	printf("\n");
 //	printf("%s\n", tmp_password);
 
+
+	//密码确认是否一致，不一致清空存放密码字符串并返回错误信息
 	if (strcmp(password, tmp_password) != 0) {
 		printf("两次输入密码不一致\n");
 		system("pause");
@@ -62,6 +81,8 @@ int InitAccount() {
 		return 0;
 	}
 
+
+	//创建账号的备注信息调用PutToFile函数
 	printf("请输入账号备注信息：\n");
 	scanf_s("%s", tips, 1024);
 	printf("创建成功\n");

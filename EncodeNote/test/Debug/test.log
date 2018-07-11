@@ -1,4 +1,5 @@
 ﻿  main.cpp
-e:\encodenote\encodenote\test\main.cpp(8): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+e:\encodenote\encodenote\test\main.cpp(9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“int *”
+e:\encodenote\encodenote\test\main.cpp(11): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“int *”
   test.vcxproj -> E:\EncodeNote\EncodeNote\Debug\test.exe
   test.vcxproj -> E:\EncodeNote\EncodeNote\Debug\test.pdb (Full PDB)

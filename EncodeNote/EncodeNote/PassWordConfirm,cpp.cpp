@@ -1,4 +1,14 @@
 
+/*
+	@Name:PassWordConfirm
+	@Programe:EncodeNoteBook
+	@Author;wyxTrustYs
+	@Time:2018-7-11
+	@Argument：char* PasswordData
+	@Description:修改密码确认函数
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>

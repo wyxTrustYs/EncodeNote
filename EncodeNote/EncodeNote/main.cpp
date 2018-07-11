@@ -3,10 +3,17 @@
 #include <string.h>
 #include "data.h"
 #include "NoteLib.h"
-//保存账号密码
-//存储时有简单的加密
-//能按照已给条件查找已有的账号密码数据
-//可以修改已有账号密码数据
+/*
+	@Name:main.cpp
+	@Programe:EncodeNoteBook
+	@Author;wyxTrustYs
+	@Time:2018-7-11
+	@Description:保存账号密码
+			  存储时有简单的加密
+			  能按照已给条件查找已有的账号密码数据
+			  可以修改已有账号密码数据
+*/
+
 
 
 int main() {
@@ -32,6 +39,6 @@ int main() {
 		default:
 			break;
 		}
-		printf("1、增加 2、查看\n");
+		printf("1、增加 2、查看 3、查看全部\n");
 	}
 }

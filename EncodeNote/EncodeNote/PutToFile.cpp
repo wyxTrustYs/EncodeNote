@@ -1,10 +1,11 @@
 
 /*
-@function:initAccountFile
-@Descreaption:Creat new file in data folder
-@author:wyxTrustYs
-@argument:char* account char* password char *tips
-@time:2018-7-9
+	@Name:PutToFile.cpp
+	@Author:wyxTrustYs
+	@Time:2018-7-11
+	@Argument:char* account char* password char *tips
+	@Descreaption:在D:\\data文件下建立一个存放密码的密码本Encode
+
 */
 
 #include <stdio.h>
