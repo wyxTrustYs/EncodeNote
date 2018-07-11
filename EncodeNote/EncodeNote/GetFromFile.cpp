@@ -13,9 +13,9 @@ int GetFromFile(char *str) {
 	char *TmpTips = NULL;
 	char *TmpPassword = NULL;
 	
-	char AccountData[20][21];
-	char PasswordData[20][21];
-	char TipsData[20][1024];
+	char AccountData[100][21];
+	char PasswordData[100][21];
+	char TipsData[100][1024];
 	int i = 0;
 	int n = 0;
 	int Flat;
@@ -42,7 +42,7 @@ int GetFromFile(char *str) {
 			strcpy(TipsData[i], TmpTips);
 			StringCat(TmpStr[n], AccountData[i], PasswordData[i], TipsData[i]);
 			MyDecode(PasswordData[i]);
-			printf("%d: %s %s %s\n",i, AccountData[i], PasswordData[i], TipsData[i]);
+			printf("%d: %s %s %s\n", i, AccountData[i], PasswordData[i], TipsData[i]);
 			SeeNum[i] = n;
 			i++;
 		}
@@ -155,4 +155,43 @@ int GetFromFile(char *str) {
 		break;
 	}
 
+}
+
+int GetFromFile() {
+	FILE *file = NULL;
+	char *FilePath = "D:\\data\\Encode";
+	char TmpStr[100][2048];
+	char *TmpAccount = NULL;
+	char *TmpTips = NULL;
+	char *TmpPassword = NULL;
+
+	char AccountData[100][21];
+	char PasswordData[100][21];
+	char TipsData[100][1024];
+	int n = 0;
+
+	for (int p = 0; p < 100; p++) {
+		memset(TmpStr[p], 0, 2048 * sizeof(char));
+	}
+
+	if ((file = fopen(FilePath, "rb+")) == NULL) {
+		printf("打开文件失败\n");
+		return 0;
+	}
+	printf("\n");
+	while (fgets(TmpStr[n], 2048, file) != NULL) {
+		
+			TmpAccount = strtok(TmpStr[n], "    ");
+			TmpPassword = strtok(NULL, "    ");
+			TmpTips = strtok(NULL, "    ");
+			strcpy(AccountData[n], TmpAccount);
+			strcpy(PasswordData[n], TmpPassword);
+			strcpy(TipsData[n], TmpTips);
+			StringCat(TmpStr[n], AccountData[n], PasswordData[n], TipsData[n]);
+			MyDecode(PasswordData[n]);
+			printf("%d: %s %s %s\n", n, AccountData[n], PasswordData[n], TipsData[n]);
+			n++;
+	}
+	fclose(file);
+	return 1;
 }

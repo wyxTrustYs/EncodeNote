@@ -13,7 +13,7 @@ int main() {
 	int flat;
 	int num = 0;
 
-	printf("1、增加 2、查看\n");
+	printf("1、增加 2、查看 3、查看全部\n");
 	while (scanf("%d", &flat) != EOF) {
 		switch (flat)
 		{
@@ -24,6 +24,11 @@ int main() {
 			break;
 		case CHECK:
 			CheckData(); break;
+		case CHECKALL:
+			if (GetFromFile() == 0) {
+				printf("查看失败\n");
+			}
+			break;
 		default:
 			break;
 		}
